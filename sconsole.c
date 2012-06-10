@@ -223,7 +223,7 @@ int main(int argc, char *argv[])
 			/* log */
 			if (argv[1][2])
 				logfile = &argv[1][2];
-			logfd = open(logfile, O_CREAT | O_WRONLY, 0644);
+			logfd = open(logfile, O_CREAT | O_WRONLY | O_APPEND, 0644);
 			break;
 		default:
 			fprintf(stderr, "unknown option %s\n", argv[1]);
